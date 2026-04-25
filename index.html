@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Post AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md max-w-md w-full text-center">
+        <h1 class="text-3xl font-bold mb-4">🚀 AI Social Post Generator</h1>
+        <p class="mb-6 text-gray-600">Craft engaging social media posts instantly. Just add your keywords!</p>
+        
+        <textarea id="keywordsInput" class="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500" rows="3" placeholder="Enter keywords or topics (e.g., 'new product launch, summer sale, limited offer')"></textarea>
+        
+        <button id="generateBtn" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300">Generate Post</button>
+        
+        <div id="postOutput" class="mt-6 p-4 bg-gray-50 border rounded-md text-left hidden">
+            <h2 class="font-semibold mb-2">Your AI-Generated Post:</h2>
+            <p id="generatedText" class="whitespace-pre-wrap"></p>
+        </div>
+
+        <p class="mt-8 text-lg font-bold">Get unlimited posts for just $9.99!</p>
+        <button id="checkoutBtn" class="mt-4 bg-green-600 text-white py-2 px-6 rounded-md hover:bg-green-700 transition duration-300">Buy Now</button>
+        
+        <p class="mt-6 text-sm text-gray-500">Powered by APEX Micro-SaaS tools.</p>
+    </div>
+
+     <script>
+      // Placeholder for frontend logic (API calls, Stripe integration)
+      document.getElementById('generateBtn').addEventListener('click', () => {
+          const keywords = document.getElementById('keywordsInput').value;
+          if (keywords) {
+              document.getElementById('generatedText').textContent = `Example post about: ${keywords}. (API call here)`;
+              document.getElementById('postOutput').classList.remove('hidden');
+          }
+      });
+
+      document.getElementById('checkoutBtn').addEventListener('click', () => {
+          alert('Stripe checkout integration would go here!');
+      });
+    </script>
+</body>
+</html>
